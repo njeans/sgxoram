@@ -45,7 +45,7 @@ fn main() {
     );
     assert_eq!(a64_bytes(0), oram.write(0, &a64_bytes(2)));
     assert_eq!(a64_bytes(2), oram.write(0, &a64_bytes(0)));
-    
+
     //sgx
     mc_common::setup_panic_handler();
     let (logger, _global_logger_guard) = create_app_logger(o!());
@@ -79,7 +79,7 @@ fn main() {
     assert_eq!(value.to_vec(), retrieved_value.to_vec());
     //let s = String::from_utf8(retrieved_value).unwrap();
 
-    
+
     enclave.add_oram_item(0, Vec::from([2; 1024])).unwrap();
     assert_eq!(Vec::from([2; 1024]), enclave.get_oram_item(0).unwrap());
     println!("okbye");
