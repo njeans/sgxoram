@@ -38,7 +38,7 @@ loggers = [
 [dependencies]
 mc-crypto-digestible = { path = "../crypto/digestible" }
 mc-crypto-keys = { path = "../crypto/keys", default-features = false }
-mc-crypto-rand = { path = "../crypto/rand" }
+mc-crypto-rand = { path = "../crypto/rand" , features = ["rdrand"]}
 # Note: mc-util-serial is an unused dependency, but anywhere we forward serde/std, we need to get rmp-serde/std also, or the build breaks.
 mc-util-serial = { path = "../util/serial", default-features = false }
 
