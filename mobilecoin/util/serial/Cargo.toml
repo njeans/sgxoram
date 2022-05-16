@@ -13,5 +13,5 @@ std = [ "serde/std", "serde_cbor/std" ]
 
 [dependencies]
 prost = { version = "0.9", default-features = false, features = ["prost-derive"] }
-serde = { version = "1.0", default-features = false, features = ["alloc", "derive"] }
-serde_cbor = { version = "0.11.1", default-features = false, features = ["alloc"] }
+serde = {git="https://github.com/njeans/serde-sgx.git", version = "1.0", default-features = false, features = ["alloc", "derive"] }
+serde_cbor = {git = "https://github.com/njeans/cbor-sgx.git",version = "0.11.1", default-features = false, features = ["alloc"] }
